@@ -4,14 +4,19 @@ import random
 
 def main():
     #Guess Counter
-    counter = 0
+    counter = 1 # counts the one correct one
     #varibles
-    randNumber = random.randint(0,9)
-    guessedNumber = 0
+   #pick a number
+    print("Choose a range of numbers to guess from")
+    low_number = int(input("First, choose the lowest number in range: "))
+    high_number = int(input("Second, choose the highest number in range: "))
+    print("I've picked a number.")
+
+    randNumber = random.randint(low_number, high_number)
 
     while True:
         #pick a number
-        print("I've picked a number.")
+
         guessedNumber = int(input("Guess what it is: "))
 
 
@@ -31,3 +36,4 @@ def main():
             print("Too high. Try again")
             counter +=1
 main()
+
